@@ -19,3 +19,9 @@ G:\TAFE\2017 Semester 1\Cert IV Programming\Data-Driven Applications\Projects\Re
 E:\TAFE\2017 Semester 1\Cert IV Programming\dotNET\Projects\RentalVehicles\RentalVehicles\bin\Debug\RentalVehicles.exe.config
 E:\TAFE\2017 Semester 1\Cert IV Programming\dotNET\Projects\RentalVehicles\RentalVehicles\obj\Debug\RentalVehicles.exe
 E:\TAFE\2017 Semester 1\Cert IV Programming\dotNET\Projects\RentalVehicles\RentalVehicles\obj\Debug\RentalVehicles.pdb
+E:\TAFE\2017 Semester 1\Cert IV Programming\dotNET\Projects\RentalVehicles\RentalVehicles\bin\Debug\RentalVehicles.exe
+E:\TAFE\2017 Semester 1\Cert IV Programming\dotNET\Projects\RentalVehicles\RentalVehicles\bin\Debug\RentalVehicles.pdb
+E:\TAFE\2017 Semester 1\Cert IV Programming\dotNET\Projects\RentalVehicles\RentalVehicles\obj\Debug\RentalVehicles.csprojResolveAssemblyReference.cache
+E:\TAFE\2017 Semester 1\Cert IV Programming\dotNET\Projects\RentalVehicles\RentalVehicles\obj\Debug\RentalVehicles.Form1.resources
+E:\TAFE\2017 Semester 1\Cert IV Programming\dotNET\Projects\RentalVehicles\RentalVehicles\obj\Debug\RentalVehicles.Properties.Resources.resources
+E:\TAFE\2017 Semester 1\Cert IV Programming\dotNET\Projects\RentalVehicles\RentalVehicles\obj\Debug\RentalVehicles.csproj.GenerateResource.Cache

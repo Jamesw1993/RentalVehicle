@@ -9,14 +9,14 @@ namespace RentalVehicles
     public class Vehicle
     {
         public Vehicle() { }
-        public Vehicle(string manufacturer, string model,string make, string regno, int TKMT, int tfCost, int serv ,bool servREQ)
+        public Vehicle(string manufacturer, string model,string make, string regno, double TKMT, int tlpurchased, int serv ,bool servREQ)
         {
             manufacturer = Manufacturer;
             model = Model;
             make = Make;
             regno = RegNo;
             TKMT = TotalKMT;
-            tfCost = TFcost;
+            tlpurchased = TLpurchased;
             serv = Serv;
             servREQ = ServREQ; 
         }
@@ -24,8 +24,8 @@ namespace RentalVehicles
         public string Model { get; set; }
         public string Make { get; set; }
         public string RegNo { get; set; }
-        public int TotalKMT { get; set; }
-        public int TFcost { get; set; }
+        public double TotalKMT { get; set; }
+        public int TLpurchased { get; set; }
         public int Serv { get; set; }
         public bool ServREQ { get; set; }
     }

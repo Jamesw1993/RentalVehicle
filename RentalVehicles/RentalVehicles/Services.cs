@@ -10,27 +10,27 @@ namespace RentalVehicles
     public class Services
     {
         //used to add journey kilometers to Vehicle total
-        public int AddJourneyKM (int totalKMT, Journey journey)
+        public double AddJourneyKM (double totalKMT, Journey journey)
         {
-            int result = totalKMT + journey.KMtravelled;
-            return result;
+            double result = totalKMT + journey.KMtravelled;
+            return result - 1;
         }
-        //used to add journey fuel cost to vehicle total
-        public int AddFuelPurchased (int TFcost, Journey journey)
+        //used to add journey fuel cost to vehicle total, tvl = TOTAL VEHICLE LITRES
+        public int AddFuelPurchased (int tvl, Journey journey)
         {
-            int result = TFcost + journey.FuelCost;
+            int result = tvl + journey.Lpurchased;
             return result;
         }
         //Calculates fuel economy
         public double FuelEconomy (Vehicle vehicle)
         {
-            double result = 100 / AVGFuelCost(vehicle);
+            double result = (vehicle.TLpurchased * 100) / vehicle.TotalKMT;
             return result;
         }
         //Calculates average fuel cost
-        public int AVGFuelCost(Vehicle vehicle)
+        public double AVGFuelCost(Journey journey)
         {
-            int result = vehicle.TotalKMT / vehicle.TFcost;
+            double result = journey.KMtravelled / journey.TFcost;
             return result;
         }
         //Checks if service is required

@@ -16,7 +16,7 @@ namespace RentalVehicles
         }
         // get vaules from (textbox) set them to new value
         public double FuelEcon { get; set; }
-        public int AVGcost {get; set;}
+        public double AVGcost {get; set;}
     }
 
 }

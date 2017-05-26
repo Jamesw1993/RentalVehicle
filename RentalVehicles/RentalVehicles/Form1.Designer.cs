@@ -47,11 +47,13 @@
             this.lblTKMT = new System.Windows.Forms.Label();
             this.txtTFP = new System.Windows.Forms.TextBox();
             this.txtTKMT = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTFcost = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCalc
             // 
-            this.btnCalc.Location = new System.Drawing.Point(66, 270);
+            this.btnCalc.Location = new System.Drawing.Point(66, 302);
             this.btnCalc.Name = "btnCalc";
             this.btnCalc.Size = new System.Drawing.Size(75, 23);
             this.btnCalc.TabIndex = 0;
@@ -89,9 +91,9 @@
             this.lblFuelCost.AutoSize = true;
             this.lblFuelCost.Location = new System.Drawing.Point(18, 232);
             this.lblFuelCost.Name = "lblFuelCost";
-            this.lblFuelCost.Size = new System.Drawing.Size(84, 13);
+            this.lblFuelCost.Size = new System.Drawing.Size(89, 13);
             this.lblFuelCost.TabIndex = 4;
-            this.lblFuelCost.Text = "Fuel Purchased:";
+            this.lblFuelCost.Text = "Litres Purchased:";
             // 
             // lblModel
             // 
@@ -167,7 +169,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(147, 270);
+            this.button1.Location = new System.Drawing.Point(147, 302);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 13;
@@ -223,11 +225,30 @@
             this.txtTKMT.TabIndex = 15;
             this.txtTKMT.Text = "1";
             // 
+            // label3
+            // 
+            this.label3.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 258);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Fuel Cost:";
+            // 
+            // txtTFcost
+            // 
+            this.txtTFcost.Location = new System.Drawing.Point(122, 258);
+            this.txtTFcost.Name = "txtTFcost";
+            this.txtTFcost.Size = new System.Drawing.Size(100, 20);
+            this.txtTFcost.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(234, 305);
+            this.ClientSize = new System.Drawing.Size(234, 337);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtTFcost);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTKMT);
             this.Controls.Add(this.txtTFP);
@@ -276,6 +297,8 @@
         private System.Windows.Forms.Label lblTKMT;
         private System.Windows.Forms.TextBox txtTFP;
         private System.Windows.Forms.TextBox txtTKMT;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtTFcost;
     }
 }
 

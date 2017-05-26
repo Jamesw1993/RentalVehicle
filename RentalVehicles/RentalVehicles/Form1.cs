@@ -22,7 +22,7 @@ namespace RentalVehicles
         private string PrintToScreen(Vehicle vehicle, FuelPurchase fuelpurchase)
         {
             string output = " Manufacturer: " + vehicle.Manufacturer + "\n Model: " + vehicle.Model + "\n Make: " + vehicle.Make + "\n Reg. number: "
-                + vehicle.RegNo + "\n Total Kilometres Travelled: " + vehicle.TotalKMT + "\n Fuel Economy: " + fuelpurchase.FuelEcon + "/100km \n Service Required: " + vehicle.ServREQ; ;
+                + vehicle.RegNo + "\n Total Kilometres Travelled: " + vehicle.TotalKMT + "\n Fuel Economy: " + fuelpurchase.FuelEcon + "/100km \n Service Required: " + vehicle.ServREQ + "\n Average fuel cost: " + fuelpurchase.AVGcost;
 
             return output;
         }
@@ -50,10 +50,11 @@ namespace RentalVehicles
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            Journey journey = new Journey(Int32.Parse(txtKMtravelled.Text), Int32.Parse(txtFuelCost.Text))
+            Journey journey = new Journey(Int32.Parse(txtKMtravelled.Text), Int32.Parse(txtFuelCost.Text), Int32.Parse(txtFuelCost.Text))
             {
                 KMtravelled = Int32.Parse(txtKMtravelled.Text),
-                FuelCost = Int32.Parse(txtFuelCost.Text)
+                Lpurchased = Int32.Parse(txtFuelCost.Text),
+                TFcost = Int32.Parse(txtTFcost.Text)
             };
             Vehicle vehicle = new Vehicle(txtManufacturer.Text, txtModel.Text, txtMake.Text, txtReg.Text, 0, 0, 0, false)
             {
@@ -61,17 +62,17 @@ namespace RentalVehicles
                 Model = txtModel.Text,
                 Make = txtMake.Text,
                 RegNo = txtReg.Text,
-                TFcost = services.AddFuelPurchased(Int32.Parse(txtTFP.Text), journey),
+                TLpurchased = services.AddFuelPurchased(Int32.Parse(txtTFP.Text), journey),
                 TotalKMT = services.AddJourneyKM(Int32.Parse(txtTKMT.Text), journey),
                 Serv = 0,
                 ServREQ = services.servREQ(Int32.Parse(txtTKMT.Text))                
             };
             txtTKMT.Text = vehicle.TotalKMT.ToString();
-            txtTFP.Text = vehicle.TFcost.ToString();
-            FuelPurchase fuelpurchase = new FuelPurchase(services.FuelEconomy(vehicle), services.AVGFuelCost(vehicle))
+            txtTFP.Text = vehicle.TLpurchased.ToString();
+            FuelPurchase fuelpurchase = new FuelPurchase(services.FuelEconomy(vehicle), services.AVGFuelCost(journey))
             {
                 FuelEcon = services.FuelEconomy(vehicle),
-                AVGcost = services.AVGFuelCost(vehicle)
+                AVGcost = services.AVGFuelCost(journey)
             };
             MessageBox.Show(PrintToScreen(vehicle, fuelpurchase));
         }
