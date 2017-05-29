@@ -1,0 +1,5 @@
+G:\TAFE\2017 Semester 1\Cert IV Programming\Open Source and Testing\Assessments\Assessment 3\VehicleRental\WindowsFormsApplication1\bin\Debug\VehicleRental.exe.config
+G:\TAFE\2017 Semester 1\Cert IV Programming\Open Source and Testing\Assessments\Assessment 3\VehicleRental\WindowsFormsApplication1\obj\Debug\VehicleRental.csprojResolveAssemblyReference.cache
+G:\TAFE\2017 Semester 1\Cert IV Programming\Open Source and Testing\Assessments\Assessment 3\VehicleRental\WindowsFormsApplication1\obj\Debug\VehicleRental.Form1.resources
+G:\TAFE\2017 Semester 1\Cert IV Programming\Open Source and Testing\Assessments\Assessment 3\VehicleRental\WindowsFormsApplication1\obj\Debug\VehicleRental.Properties.Resources.resources
+G:\TAFE\2017 Semester 1\Cert IV Programming\Open Source and Testing\Assessments\Assessment 3\VehicleRental\WindowsFormsApplication1\obj\Debug\VehicleRental.csproj.GenerateResource.Cache
