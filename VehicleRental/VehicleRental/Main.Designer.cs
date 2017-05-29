@@ -35,7 +35,9 @@
             this.btnReport = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnAddJourney = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnPerDay = new System.Windows.Forms.Button();
+            this.btnPerKM = new System.Windows.Forms.Button();
             this.txtJourney = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -43,13 +45,10 @@
             this.txtFuel = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnService = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnPerKM = new System.Windows.Forms.Button();
-            this.btnPerDay = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtDays = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,31 +114,53 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnAddJourney);
+            this.groupBox1.Controls.Add(this.txtDays);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.btnPerDay);
+            this.groupBox1.Controls.Add(this.btnPerKM);
             this.groupBox1.Controls.Add(this.txtJourney);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(260, 77);
+            this.groupBox1.Size = new System.Drawing.Size(260, 100);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Journey";
             // 
-            // btnAddJourney
+            // label5
             // 
-            this.btnAddJourney.Location = new System.Drawing.Point(179, 45);
-            this.btnAddJourney.Name = "btnAddJourney";
-            this.btnAddJourney.Size = new System.Drawing.Size(75, 23);
-            this.btnAddJourney.TabIndex = 8;
-            this.btnAddJourney.Text = "Add Journey";
-            this.btnAddJourney.UseVisualStyleBackColor = true;
-            this.btnAddJourney.Click += new System.EventHandler(this.btnAddJourney_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Days Rented:";
+            // 
+            // btnPerDay
+            // 
+            this.btnPerDay.Location = new System.Drawing.Point(179, 71);
+            this.btnPerDay.Name = "btnPerDay";
+            this.btnPerDay.Size = new System.Drawing.Size(75, 23);
+            this.btnPerDay.TabIndex = 11;
+            this.btnPerDay.Text = "Per Day";
+            this.btnPerDay.UseVisualStyleBackColor = true;
+            this.btnPerDay.Click += new System.EventHandler(this.btnPerDay_Click);
+            // 
+            // btnPerKM
+            // 
+            this.btnPerKM.Location = new System.Drawing.Point(98, 71);
+            this.btnPerKM.Name = "btnPerKM";
+            this.btnPerKM.Size = new System.Drawing.Size(75, 23);
+            this.btnPerKM.TabIndex = 8;
+            this.btnPerKM.Text = "Per KM";
+            this.btnPerKM.UseVisualStyleBackColor = true;
+            this.btnPerKM.Click += new System.EventHandler(this.btnPerKM_Click);
             // 
             // txtJourney
             // 
-            this.txtJourney.Location = new System.Drawing.Point(117, 19);
+            this.txtJourney.Location = new System.Drawing.Point(98, 19);
             this.txtJourney.Name = "txtJourney";
-            this.txtJourney.Size = new System.Drawing.Size(137, 20);
+            this.txtJourney.Size = new System.Drawing.Size(156, 20);
             this.txtJourney.TabIndex = 3;
             // 
             // label4
@@ -147,21 +168,21 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 13);
+            this.label4.Size = new System.Drawing.Size(73, 13);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Kilometres Travelled:";
+            this.label4.Text = "KM Travelled:";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnAddFuel);
             this.groupBox2.Controls.Add(this.txtFuel);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(12, 95);
+            this.groupBox2.Location = new System.Drawing.Point(12, 122);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(260, 76);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Fuel Purchased";
+            this.groupBox2.Text = "Fuel";
             // 
             // btnAddFuel
             // 
@@ -175,15 +196,15 @@
             // 
             // txtFuel
             // 
-            this.txtFuel.Location = new System.Drawing.Point(117, 19);
+            this.txtFuel.Location = new System.Drawing.Point(98, 19);
             this.txtFuel.Name = "txtFuel";
-            this.txtFuel.Size = new System.Drawing.Size(137, 20);
+            this.txtFuel.Size = new System.Drawing.Size(156, 20);
             this.txtFuel.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 25);
+            this.label3.Location = new System.Drawing.Point(6, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 13);
             this.label3.TabIndex = 0;
@@ -191,7 +212,7 @@
             // 
             // btnService
             // 
-            this.btnService.Location = new System.Drawing.Point(9, 16);
+            this.btnService.Location = new System.Drawing.Point(6, 16);
             this.btnService.Name = "btnService";
             this.btnService.Size = new System.Drawing.Size(245, 23);
             this.btnService.TabIndex = 8;
@@ -199,44 +220,22 @@
             this.btnService.UseVisualStyleBackColor = true;
             this.btnService.Click += new System.EventHandler(this.btnService_Click);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btnPerKM);
-            this.groupBox3.Controls.Add(this.btnPerDay);
-            this.groupBox3.Location = new System.Drawing.Point(12, 177);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(260, 45);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Rental Type";
-            // 
-            // btnPerKM
-            // 
-            this.btnPerKM.Location = new System.Drawing.Point(98, 16);
-            this.btnPerKM.Name = "btnPerKM";
-            this.btnPerKM.Size = new System.Drawing.Size(75, 23);
-            this.btnPerKM.TabIndex = 11;
-            this.btnPerKM.Text = "Per KM";
-            this.btnPerKM.UseVisualStyleBackColor = true;
-            // 
-            // btnPerDay
-            // 
-            this.btnPerDay.Location = new System.Drawing.Point(179, 16);
-            this.btnPerDay.Name = "btnPerDay";
-            this.btnPerDay.Size = new System.Drawing.Size(75, 23);
-            this.btnPerDay.TabIndex = 9;
-            this.btnPerDay.Text = "Per Day";
-            this.btnPerDay.UseVisualStyleBackColor = true;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnService);
-            this.groupBox4.Location = new System.Drawing.Point(12, 229);
+            this.groupBox4.Location = new System.Drawing.Point(12, 204);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(260, 45);
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Service";
+            // 
+            // txtDays
+            // 
+            this.txtDays.Location = new System.Drawing.Point(98, 45);
+            this.txtDays.Name = "txtDays";
+            this.txtDays.Size = new System.Drawing.Size(156, 20);
+            this.txtDays.TabIndex = 13;
             // 
             // Main
             // 
@@ -244,7 +243,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 286);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
@@ -259,7 +257,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -275,7 +272,7 @@
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnAddJourney;
+        private System.Windows.Forms.Button btnPerKM;
         private System.Windows.Forms.TextBox txtJourney;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -283,10 +280,10 @@
         private System.Windows.Forms.TextBox txtFuel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnService;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnPerKM;
         private System.Windows.Forms.Button btnPerDay;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtDays;
     }
 }
 
